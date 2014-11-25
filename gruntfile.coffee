@@ -90,8 +90,8 @@ module.exports = (grunt) ->
       index_compile:
         options:
           data: () ->
-            css:        ['assets/flip-bp.css']
-            js:         ['assets/flip-bp.js']
+            css:        ['assets/<%= pkg.name %>.css']
+            js:         ['assets/<%= pkg.name %>.js']
             vendor_css: []
             vendor_js:  []
         files: [{
@@ -150,10 +150,10 @@ module.exports = (grunt) ->
     less:
       build:
         files:
-          '<%= cfg.build_dir %>/assets/flip-bp.css': 'src/**/*.less'
+          '<%= cfg.build_dir %>/assets/<%= pkg.name %>.css': 'src/**/*.less'
       compile:
         files:
-          '<%= cfg.compile_dir %>/assets/flip-bp.css': 'src/**/*.less'
+          '<%= cfg.compile_dir %>/assets/<%= pkg.name %>.css': 'src/**/*.less'
         options:
           cleancss: true,
           compress: true
@@ -199,29 +199,29 @@ module.exports = (grunt) ->
     ngAnnotate:
       compile:
         files:
-          '<%= cfg.compile_dir %>/assets/flip-bp.js':
-            ['<%= cfg.compile_dir %>/assets/flip-bp.js']
+          '<%= cfg.compile_dir %>/assets/<%= pkg.name %>.js':
+            ['<%= cfg.compile_dir %>/assets/<%= pkg.name %>.js']
 
     concat:
       css:
         src: [
           '<%= cfg.vendor_css %>'
-          '<%= cfg.build_dir %>/assets/flip-bp.css'
+          '<%= cfg.build_dir %>/assets/<%= pkg.name %>.css'
         ]
-        dest: '<%= cfg.compile_dir %>/assets/flip-bp.css'
+        dest: '<%= cfg.compile_dir %>/assets/<%= pkg.name %>.css'
       js:
         src: [
           '<%= cfg.vendor_js %>'
           '<%= cfg.build_dir %>/**/*.js'
           '!**/<%= cfg.build_dir %>/vendor/**/*.js'
         ]
-        dest: '<%= cfg.compile_dir %>/assets/flip-bp.js'
+        dest: '<%= cfg.compile_dir %>/assets/<%= pkg.name %>.js'
 
     uglify:
       compile:
         files:
-          '<%= cfg.compile_dir %>/assets/flip-bp.js':
-            '<%= cfg.compile_dir %>/assets/flip-bp.js'
+          '<%= cfg.compile_dir %>/assets/<%= pkg.name %>.js':
+            '<%= cfg.compile_dir %>/assets/<%= pkg.name %>.js'
 
 
     #
