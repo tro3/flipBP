@@ -90,8 +90,8 @@ module.exports = (grunt) ->
       index_compile:
         options:
           data: () ->
-            css:        ['assets/<%= pkg.name %>.css']
-            js:         ['assets/<%= pkg.name %>.js']
+            css:        ["assets/#{grunt.config.get('pkg.name')}.css"]
+            js:         ["assets/#{grunt.config.get('pkg.name')}.js"]
             vendor_css: []
             vendor_js:  []
         files: [{

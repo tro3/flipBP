@@ -4,7 +4,7 @@ describe( 'Top-Level', () ->
   )
   
   describe( 'Controller', () ->
-    beforeEach(inject(($controller, _$location_, $rootScope) ->
+    beforeEach(inject( ($controller, _$location_, $rootScope) ->
       @location = _$location_
       @scope = $rootScope.$new()
       @ctrl = $controller('appCtrl',
