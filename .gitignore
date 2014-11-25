@@ -41,3 +41,12 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+*.bat
+node_modules/**
+tmp/**
+build/**
+dist/**
+vendor/**
+

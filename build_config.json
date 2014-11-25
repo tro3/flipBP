@@ -1,0 +1,20 @@
+{
+  "app_name": "flipBP",
+  "tmp_dir": "tmp",
+  "build_dir": "build",
+  "compile_dir": "dist",
+  "vendor_css": [
+    "vendor/components-font-awesome/css/font-awesome.css"
+  ],
+  "vendor_js": [
+    "vendor/angular/angular.js",
+    "vendor/angular-bootstrap/ui-bootstrap-tpls.min.js",
+    "vendor/angular-ui-router/release/angular-ui-router.js"
+  ],
+  "vendor_test": [
+    "vendor/angular-mocks/angular-mocks.js"
+  ],
+  "vendor_other": [
+    "vendor/components-font-awesome/fonts/fontawesome-webfont.woff"
+  ]
+}

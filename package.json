@@ -1,0 +1,37 @@
+{
+  "author": "Trey Roessig",
+  "name": "flipBP",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tro3/flipBP",
+  "licenses": {
+    "type": "MIT"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "",
+    "load-grunt-tasks": "",
+
+    "grunt": "",
+    "grunt-coffeelint": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-coffee": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-jade": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-less": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-watch": "",
+    "grunt-html2js": "",
+    "grunt-karma": "",
+    "grunt-newer": "",
+    "grunt-ng-annotate": "",
+    "grunt-protractor-runner": "",
+
+    "karma": "",
+    "karma-chrome-launcher": "",
+    "karma-firefox-launcher": "",
+    "karma-coffee-preprocessor": "",
+    "karma-jasmine": ""
+  }
+}

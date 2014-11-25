@@ -1,0 +1,14 @@
+{
+  "name": "flipBP",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "",
+    "bootstrap": "",
+    "angular-bootstrap": "",
+    "angular-ui-router": "",
+    "components-font-awesome": ""
+  },
+  "devDependencies": {
+    "angular-mocks": ""   
+  }
+}

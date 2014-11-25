@@ -1,0 +1,37 @@
+html(ng-app="appTop", ng-controller="appCtrl")
+  head
+    title(ng-bind="pageTitle")
+
+    - for(var i =0; i < vendor_css.length; i++)
+        link(rel="stylesheet", type="text/css", href="#{vendor_css[i]}")
+    - for(var i =0; i < css.length; i++)
+        link(rel="stylesheet", type="text/css", href="#{css[i]}")
+    - for(var i =0; i < vendor_js.length; i++)
+        script(type="text/javascript", src="#{vendor_js[i]}")
+    - for(var i =0; i < js.length; i++)
+        script(type="text/javascript", src="#{js[i]}")
+        
+  body
+    .container
+      .navbar.navbar-default
+        .navbar-header
+          .navbar-brand
+            | Flip-BP
+        .navbar-collapse
+          ul.nav.navbar-nav
+            li(ui-sref-active-eq="active")
+              a(ui-sref="home")
+                i.fa.fa-home
+                |  Home
+            li(ui-sref-active-eq="active")
+              a(ui-sref="about")
+                i.fa.fa-info-circle
+                |  About
+      
+    .container
+      ui-view
+      
+    footer.footer
+      .container
+        .footer-inner
+          p (c) 2014 Trey Roessig
