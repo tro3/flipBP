@@ -182,6 +182,7 @@ module.exports = (grunt) ->
           singleRun: false
       compile:
         options:
+          singleRun: true
           files: [
             '<%= cfg.compile_dir%>/**/*.js'
             '<%= cfg.vendor_test %>'
