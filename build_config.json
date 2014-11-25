@@ -3,6 +3,7 @@
   "tmp_dir": "tmp",
   "build_dir": "build",
   "compile_dir": "dist",
+  "deploy_dir": "../server/static",
   "vendor_css": [
     "vendor/components-font-awesome/css/font-awesome.css"
   ],

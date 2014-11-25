@@ -1,3 +1,8 @@
+# FlipBP
+
+A boilerplate project for the Flip web framework
+
+
 # App setup
 
 [Angular Best Practice Guidelines for Project Structure](http://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html)
@@ -18,4 +23,6 @@ python e2e\testserver.py
 grunt e2e
 
 grunt compile
+
+grunt deploy
 ```

@@ -56,7 +56,14 @@ module.exports = (grunt) ->
           dest: '<%= cfg.compile_dir %>'
           expand: true
         ]
-
+      deploy:
+        files: [
+          cwd: '<%= cfg.compile_dir %>'
+          src: ['**']
+          dest: '<%= cfg.deploy_dir %>'
+          expand: true
+        ]
+    
 
     #
     #  HTML Processing
@@ -306,3 +313,5 @@ module.exports = (grunt) ->
   grunt.registerTask('compile', ['pure_compile', 'karma:compile'])
 
   grunt.registerTask('e2e', ['protractor'])
+
+  grunt.registerTask('deploy', ['copy:deploy'])
