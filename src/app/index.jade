@@ -27,6 +27,14 @@ html(ng-app="appTop", ng-controller="appCtrl")
               a(ui-sref="about")
                 i.fa.fa-info-circle
                 |  About
+          ul.nav.navbar-nav.navbar-right
+            li.navbar-brand Test Server
+            li
+              a(href="/_restart")
+                |  Restart
+            li
+              a(href="/_end")
+                |  End
       
     .container
       ui-view

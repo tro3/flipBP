@@ -190,6 +190,11 @@ module.exports = (grunt) ->
             'src/**/*.spec.coffee'
           ]
 
+    protractor:
+      all:
+        configFile: "e2e/e2e.conf.coffee"
+        keepAlive: true
+        noColor: false
 
 
     #
@@ -300,3 +305,4 @@ module.exports = (grunt) ->
   ])
   grunt.registerTask('compile', ['pure_compile', 'karma:compile'])
 
+  grunt.registerTask('e2e', ['protractor'])
