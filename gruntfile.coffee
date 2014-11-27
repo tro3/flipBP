@@ -89,6 +89,7 @@ module.exports = (grunt) ->
             js:         grunt.file.expand({cwd:'build'}, ['**/*.js'])
             vendor_css: grunt.config.get('cfg.vendor_css')
             vendor_js:  grunt.config.get('cfg.vendor_js')
+            build:      true
         files: [{
           src: "src/app/index.jade"
           dest: '<%= cfg.build_dir %>/index.html'
@@ -101,6 +102,7 @@ module.exports = (grunt) ->
             js:         ["assets/#{grunt.config.get('pkg.name')}.js"]
             vendor_css: []
             vendor_js:  []
+            build:      false
         files: [{
           src: "src/app/index.jade"
           dest: '<%= cfg.compile_dir %>/index.html'
@@ -305,8 +307,6 @@ module.exports = (grunt) ->
 
 
   grunt.registerTask('pure_compile', [
-    'lint', 'clean',
-    'build_js', 'build_css', 'build_html',
     'compile_js', 'compile_css', 'compile_html',
     'copy:assets_compile'
   ])
@@ -315,3 +315,10 @@ module.exports = (grunt) ->
   grunt.registerTask('e2e', ['protractor'])
 
   grunt.registerTask('deploy', ['copy:deploy'])
+
+  grunt.registerTask('publish', [
+    'pure_build', 'karma:build',
+    'pure_compile', 'karma:compile',
+    'deploy'
+  ])
+
