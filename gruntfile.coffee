@@ -175,24 +175,34 @@ module.exports = (grunt) ->
     karma:
       options:
         configFile: 'karma.conf.js'
-        files: [
-          '<%= cfg.vendor_js %>'
-          '<%= cfg.vendor_test %>'
-          '<%= cfg.build_dir %>/**/*.js'
-          'src/**/*.spec.js'
-          'src/**/*.spec.coffee'
-        ]
       build:
         options:
           singleRun: true
+        files:
+          src: [
+            '<%= cfg.vendor_js %>'
+            '<%= cfg.vendor_test %>'
+            '<%= cfg.build_dir %>/**/*.js'
+            'src/**/*.spec.js'
+            'src/**/*.spec.coffee'
+          ]
       monitor:
         options:
           background: true
           singleRun: false
+        files:
+          src: [
+            '<%= cfg.vendor_js %>'
+            '<%= cfg.vendor_test %>'
+            '<%= cfg.build_dir %>/**/*.js'
+            'src/**/*.spec.js'
+            'src/**/*.spec.coffee'
+          ]
       compile:
         options:
           singleRun: true
-          files: [
+        files:
+          src: [
             '<%= cfg.compile_dir%>/**/*.js'
             '<%= cfg.vendor_test %>'
             'src/**/*.spec.js'
